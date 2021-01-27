@@ -54,6 +54,8 @@ function App() {
       const data = [ ...first.data, ...second.data ];
       setList(data);
       setLoaded(true);
+
+      console.log('data', data[0])
     }));
   }
 

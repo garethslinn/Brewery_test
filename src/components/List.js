@@ -7,9 +7,9 @@ const List = (props) => {
             { list &&
             list.map((item, index) => ( 
             <tr data-testid={'row-' + index }key={index} onClick={() => getDetails(item.id)}>
-                <td>{ item.name }</td>
-                <td>{ item.brewery_type }</td>
-                <td>{ item.state }</td>
+                <td data-testid={'name-' + index}>{ item.name }</td>
+                <td data-testid={'type-' + index}>{ item.brewery_type }</td>
+                <td data-testid={'state-' + index}>{ item.state }</td>
             </tr>
             ))
             }
