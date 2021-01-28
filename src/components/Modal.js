@@ -11,7 +11,7 @@ const Modal = (props) => {
                 <div className="modal-content">
                 <div className="modal-header">
                     <div className="modal-title" id="exampleModalLongTitle">
-                        Last updated: { lastUpdated }
+                        Last updated: <span data-id="lastUpdated">{ lastUpdated }</span>
                     </div>
                     <button onClick={ () => closeModal() }type="button" className="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -22,49 +22,49 @@ const Modal = (props) => {
                             <React.Fragment>
                                 <div className="row">
                                     <div className="col">
-                                        <h1>{ item.name }</h1>
+                                        <h1 data-testid="name">{ item.name }</h1>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <strong>Brewery type:</strong> { item.brewery_type }
+                                        <strong>Brewery type:</strong> <span data-testid="type">{ item.brewery_type }</span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <strong>Street:</strong> { item.street }
+                                        <strong>Street:</strong> <span data-testid="street">{ item.street }</span>
                                     </div>
                                     <div className="col">
-                                        <strong>City:</strong> { item.city }
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col">
-                                        <strong>State:</strong> { item.state }
-                                    </div>
-                                    <div className="col">
-                                        <strong>Country:</strong> { item.country }
+                                        <strong>City:</strong> <span data-testid="city">{ item.city }</span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <strong>Postal Code:</strong> { item.postal_code }
+                                        <strong>State:</strong> <span data-testid="state">{ item.state }</span>
                                     </div>
                                     <div className="col">
-                                        <strong>Phone:</strong> { item.phone }
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col">
-                                        <strong>Website</strong> <a href={ item.website_url }>{ item.website_url }</a>
+                                        <strong>Country:</strong> <span data-testid="country">{ item.country }</span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <strong>Latitude:</strong> { item.latitude }
+                                        <strong>Postal Code:</strong> <span data-testid="postcode">{ item.postal_code }</span>
                                     </div>
                                     <div className="col">
-                                        <strong>Longitude:</strong> { item.longitude }
+                                        <strong>Phone:</strong> <span data-testid="phone">{ item.phone }</span>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col">
+                                        <strong>Website</strong> <span data-testid="url"><a href={ item.website_url }>{ item.website_url }</a></span>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col">
+                                        <strong>Latitude:</strong> <span data-testid="latitude">{ item.latitude }</span>
+                                    </div>
+                                    <div className="col">
+                                        <strong>Longitude:</strong> <span data-testid="longitude">{ item.longitude }</span>
                                     </div>
                                 </div>
                             </React.Fragment>

@@ -1,20 +1,11 @@
 import React from "react";
 
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
 import Filter from "../components/Filter";
 
-let container = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
 afterEach(() => {
-  // cleanup on exiting
-  container.remove();
-  container = null;
+  cleanup();
 });
 
 test('renders filter and passes in state as the correct value', async () => {
